@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coca Cola | Store</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="css/cart.css" />
+		 <link rel="stylesheet" href="css/styles1.css">
+		 
+		 <link rel="stylesheet" href="css/w3.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="store.js" async></script>
+		<script src="https://www.gstatic.com/firebasejs/6.2.3/firebase.js"></script>
+		 <script src="cart.js"></script>
+		
+		<style>
+		.bkbr{
+	border-style: double;
+    border-radius: 10px;
+    padding: 2%;
+    border-color: #4d0099;
+	background-color:white;
+}
+		</style>
+    </head>
+    <body style="background-color:#e6e6e6;">
+
+
+<!--section a-->
+<div class="w3-bar w3-black">
+  <a href="coca-cola.htm" class="w3-bar-item w3-button w3-mobile " style="width:20%; background-color:#1a330 ; font-family:verdana;" >Home</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-mobile " style="width:20%; background-color:#1a330; font-family:verdana;">About us</a>
+  <a href="cart.htm" class="w3-bar-item w3-button w3-mobile " style="width:20%; background-color:#1a330; font-family:verdana;">Brands</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-mobile" style="width:20%; background-color:#1a330; font-family:verdana;">Contact</a>
+  <a href="faq.htm" class="w3-bar-item w3-button w3-mobile " style="width:20%; background-color:#1a330; font-family:verdana;">FAQ</a>
+  
+  </div>
+</div> 
+
+	
+	<h1 style="color:#2d2d86; text-align:center; font-size:320%; background-color:#d9d9f2;">SHOPPING CART</h1>
+      
+        <section class="container content-section">
+            <h2 class="section-header">Coca-Cola</h2>
+            <div class="shop-items">
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Coca-Cola(500 ml)</span>
+                    <img class="shop-item-image" src="images/coc.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="c1"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Coca-Cola(2 l)</span>
+                    <img class="shop-item-image" src="images/coc.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="c2"></span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+				</div>
+              </section>
+			  
+			  
+        <section class="container content-section">
+            <h2 class="section-header">Limca</h2>
+            <div class="shop-items">
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Limca(500 ml)</span>
+                    <img class="shop-item-image" src="images/limca.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="l1"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Limca(2 l)</span>
+                    <img class="shop-item-image" src="images/limca.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="l2"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+		<section class="container content-section">
+            <h2 class="section-header">Maaza</h2>
+            <div class="shop-items">
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Maaza(500 ml)</span>
+                    <img class="shop-item-image" src="images/maaza.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="m1"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Maaza(2 l)</span>
+                    <img class="shop-item-image" src="images/maaza.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="m2"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+		
+		
+		<section class="container content-section">
+            <h2 class="section-header">Fanta</h2>
+            <div class="shop-items">
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Fanta(500 ml)</span>
+                    <img class="shop-item-image" src="images/fanta.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="f1"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Fanta(2 l)</span>
+                    <img class="shop-item-image" src="images/fanta.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="f2"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+		<section class="container content-section">
+            <h2 class="section-header">Sprite</h2>
+            <div class="shop-items">
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Sprite(500 ml)</span>
+                    <img class="shop-item-image" src="images/sprite.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="s2"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item bkbr">
+                    <span class="shop-item-title">Sprite(2 l)</span>
+                    <img class="shop-item-image" src="images/sprite.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price" id="s1"></span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+	 <hr style="border: 5px solid  #4d0099;
+  border-radius: 5px; ">
+		
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">0 INR</span>
+            </div>
+			<a href="payment.html">
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+         </a>
+		</section>
+		<!--section last-->
+<div class = "footer">
+<div class="footer-content">
+<div class="footer-section about">
+<h1 class ="logo-text"><span style="color: white;"><b style="color: white;">CocaCola</b></span></h1>
+<p style="color: white;">
+Coca Cola "Take To Home" aims at providing its customers with direct supply 
+from the distributors, making the all time favourite soft drink cheaper.
+</p>
+<div class ="contact">
+<span style="color: white;"><i class="fa fa-phone" style="color: white;"> </i> &nbsp; 123-456-789</span>
+<span style="color: white;"><i class="fa fa-envelope-o" style="color: white;"> </i> &nbsp; support@cocacola.in</span>
+</div>
+
+</div>
+<div class="footer-section links">
+<h2>Quick Links</h2>
+<br>
+<ul>
+<a href="about.html"><li style="color: white;">About Us</li></a>
+<a href="cart.htm"><li style="color: white;">Brands</li></a>
+<a href="faq.htm"><li  style="color: white;">FAQs</li></a>
+</ul>
+</div>
+<div class="footer-section follow">
+<div class ="socials">
+<h2>Follow Us On</h2>
+<a href ="https://www.facebook.com/cocacolaindia/" ><i class="fa fa-facebook" aria-hidden="true" style="color: blue;"></i></a>
+<a href ="https://www.instagram.com/cocacolaindia/?hl=en" style="color: blue;"><i class="fa fa-instagram" aria-hidden="true" style="color: blue;"></i></a>
+<a href ="https://twitter.com/CocaCola_Ind" ><i class="fa fa-twitter" aria-hidden="true" style="color: blue;"></i></a>
+<a href ="https://www.youtube.com/user/cocacola"  ><i class="fa fa-youtube" aria-hidden="true"style="color: blue;"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; cocacola.in  
+</div>
+</div>
+      
+    </body>
+</html>
